@@ -1,0 +1,1 @@
+﻿//%attributes = {"invisible":true}Progress SET PROGRESS (progID;Num:C11($1/100))

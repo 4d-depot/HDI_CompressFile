@@ -1,0 +1,387 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 930,
+	"windowMinHeight": 720,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"TabControl": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 890,
+					"height": 680,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TabControl",
+					"dataSourceTypeHint": "arrayText",
+					"action": "GotoPage",
+					"events": [
+						"onClick"
+					],
+					"bottom": 700
+				}
+			}
+		},
+		{
+			"objects": {
+				"Field": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 850,
+					"height": 593,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TextTabControl{1}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "default"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Field1": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 630,
+					"height": 593,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TextTabControl{2}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "default",
+					"right": 670
+				},
+				"btnCompressFile": {
+					"type": "button",
+					"text": "Compress File",
+					"top": 80,
+					"left": 690,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnCompressFile.4dm",
+					"sizingX": "move"
+				},
+				"btnCompressFolder": {
+					"type": "button",
+					"text": "Compress Folder",
+					"top": 300,
+					"left": 690,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnCompressFolder.4dm",
+					"sizingX": "move"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 665,
+					"left": 796,
+					"width": 94,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "bTrace",
+					"sizingY": "move"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Field2": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 630,
+					"height": 593,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TextTabControl{3}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "default",
+					"right": 670
+				},
+				"btnCompressProgressBar": {
+					"type": "button",
+					"text": "Compress with progress bar",
+					"top": 80,
+					"left": 680,
+					"width": 210,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnCompressProgressBar.4dm",
+					"sizingX": "move"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 665,
+					"left": 796,
+					"width": 94,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "bTrace",
+					"sizingY": "move"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Field3": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 848,
+					"height": 257,
+					"sizingX": "grow",
+					"sizingY": "fixed",
+					"dataSource": "TextTabControl{4}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"multiline": "yes",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "default",
+					"right": 888
+				},
+				"btnReadArchive": {
+					"type": "button",
+					"text": "Read archive",
+					"top": 390,
+					"left": 40,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnReadArchive.4dm",
+					"sizingX": "move"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 40,
+					"top": 430,
+					"width": 684,
+					"height": 248,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.content",
+					"headerHeight": "2em",
+					"lockedColumnCount": 0,
+					"selectionMode": "single",
+					"hideFocusRing": true,
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"sizingY": "grow",
+					"sizingX": "grow",
+					"selectedItemsSource": "selectedItems",
+					"currentItemSource": "currentItem",
+					"columns": [
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Path"
+							},
+							"name": "Column6",
+							"dataSource": "This:C1470.path",
+							"width": 171,
+							"footer": {
+								"name": "Footer6"
+							}
+						},
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 139
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Extension"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.extension",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 82
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Size"
+							},
+							"name": "Column3",
+							"dataSource": "This:C1470.size",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 88
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Is file"
+							},
+							"name": "Column4",
+							"dataSourceTypeHint": "boolean",
+							"dataSource": "This:C1470.isFile",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 80
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Is folder"
+							},
+							"name": "Column5",
+							"dataSource": "This:C1470.isFolder",
+							"dataSourceTypeHint": "boolean",
+							"footer": {
+								"name": "Footer5"
+							},
+							"width": 79
+						}
+					]
+				},
+				"btnReadFile": {
+					"type": "button",
+					"text": "Read file",
+					"top": 460,
+					"left": 744,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnReadFile.4dm",
+					"sizingX": "move"
+				},
+				"btnExtractOneFile": {
+					"type": "button",
+					"text": "Extract 1 element",
+					"top": 510,
+					"left": 744,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnExtractOneFile.4dm"
+				},
+				"btnExtractAll": {
+					"type": "button",
+					"text": "Extract all elements",
+					"top": 390,
+					"left": 210,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnExtractAll.4dm"
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 665,
+					"left": 796,
+					"width": 94,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "bTrace",
+					"sizingY": "move"
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": true,
+		"kind": true
+	},
+	"rightMargin": 20,
+	"bottomMargin": 20
+}
